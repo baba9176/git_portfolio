@@ -1,0 +1,674 @@
+@charset "utf-8"; 
+
+#wrap{
+    
+    .h-fixed{
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    h1{
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        // margin-left: js에서 동적으로 설정 ;
+        color: #fff;
+        font-size: 24px;
+        z-index: 100;
+    }
+    
+    .loading{
+        /* 전체화면 가득 채우기 */
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 10000;
+        >p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 64px;
+            height: 64px;
+            margin: -32px 0 0 -32px;
+            background-image: url(./../images/loading.gif);
+            text-indent: -9999px;
+        }
+    }
+    
+    
+    header{
+        position: relative;
+        width: 100%;
+        min-width: 1100px;
+        // margin-bottom: 50px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+        z-index: 1000;
+        /* opacity: 0.3; */
+
+        &:after{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 1px;
+            border-bottom: 1px solid #eee;
+            content: '';
+        }
+        
+        >.container{
+            position: relative;
+            width: 1100px;
+            height: 66px;
+            margin: 0 auto;
+            z-index: 1000;
+
+            
+            >.logo{
+                width: 100px;
+                margin-top: 10px;
+                background-image: url(./../images/FLOR/logo.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                >a{
+                    display: block;
+                    width: 200px;
+                    height: 66px;
+                    color: #1a5a2d;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 66px;
+                    text-indent:100px;
+
+                    >span{color: #fff;}
+                }
+            }
+        
+            >nav{
+                position: absolute;
+                right: 50px;
+                top: 0;
+        
+                >.gnb{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    width: 600px;
+        
+                    >li{
+                        width: 100px;
+                        >a{
+                            display: block;
+                            height: 66px;
+                            line-height: 66px;
+                            text-align: center;
+                        }
+                        &.on>a,
+                        &:hover>a{
+                            color: #1a5a2d;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    header~section{
+        padding-top: 70px;
+
+        >h2{
+            position: relative;
+            margin-bottom:70px;
+            color:#1a5a2d;
+            font-size:50px;
+            line-height:50px;
+            text-align:center;
+            text-transform:uppercase;
+    
+            &:after{
+                display:block;
+                position: absolute;
+                left: 50%;
+                top: -30px;
+                width:65px;
+                height:80px;
+                background-image:url(./../images/FLOR/새삭잎_deco_tit.png);//새싹
+                background-size:cover;
+                content:'';
+            }
+        }
+    }
+    
+    section{
+        width: 100%;
+        min-width: 1100px;
+
+        &#visual{  
+            // display: none;//임시
+            
+            &:before{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(27, 27, 27, 0.2);
+                content: '';
+            }
+
+            position: relative;
+            min-width: 1100px;
+            background-image: url(./../images/FLOR/visual.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          
+    
+            >.intro{
+                position: absolute;
+                top: 50%;         
+                left: 0;
+  
+                width: 100%;
+                text-align: center;
+                //border: 1px solid #ff0;
+
+                >h2{
+                    position: absolute;
+                    top: -50px;
+                    left: 56%;
+                    width: 150px;
+                    height: 100px;
+                    text-indent: -9999px;
+                    background-image: url(./../images/FLOR/w_logo.png);
+                    background-repeat: no-repeat;
+
+                }
+
+                >p{
+                    margin-top: 20px;
+                    color: #f7f7f7;
+                    font-size: 18px;
+                    text-indent: 520px;
+                    letter-spacing: 3px;
+                }
+
+                >.myico{
+                    position: absolute;
+                    bottom: -400px;
+                    right: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 150px;
+                    margin: 60px auto 0;
+
+
+                    >span{
+                        display: block;
+                        width: 40px;
+                        border: 1px solid #fff;
+                        border-radius: 30px;
+                        transition: all 0.6s;
+
+                        &:hover{
+                            background-color: #82eea2;
+                            border-color: transparent;
+                        }
+
+                        >i{
+                            display: block;
+                            height: 40px;
+                            color: #fff;
+                            font-size: 18px;
+                            line-height: 40px;
+                            text-align: center;
+                        }
+                    }
+                
+                }
+            }
+        }
+
+        &#product{
+
+            article{
+                width: 1100px;
+                margin: 0 auto;                
+            }
+
+            >.slides{
+                overflow: hidden;
+                position: relative;
+                height: 576px;
+
+                >.slides-container{
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: calc(1100px * 5);
+
+                    >li{
+                        width: 1100px;
+                        height: 620px;
+                        text-indent: -9999px;
+                        background-position: center center;
+                        background-size: cover;
+                        
+
+                        &.banner_1{background-image: url(../images/product/slides/slide_1.jpg);}
+                        &.banner_2{background-image: url(../images/product/slides/slide_2.jpg);}
+                        &.banner_3{background-image: url(../images/product/slides/slide_3.jpg);}
+                        &.banner_4{background-image: url(../images/product/slides/slide_4.jpg);}
+                        &.banner_5{background-image: url(../images/product/slides/slide_5.jpg);}
+                    }
+                }
+
+                >.slides-pagination{
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 15px;
+                    width: 110px;
+                    margin-left: -55px;
+
+                    >li{
+                        float: left;
+                        margin-right: 5px;
+                        width: 18px;
+                        background-image: url(../images/product/slides/bul.png);
+
+                        &:hover,
+                        &.on{
+                            background-position: 0 -18px;
+                        }
+
+                        >a{
+                            display: block;
+                            height: 18px;
+                            text-indent: -9999px;
+                        }
+                    }
+                }
+
+                >a{
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    width: 80px;
+                    height: 100px;    
+                    margin-top: -50px;
+                    text-indent: -9999px;
+                    background-image: url(./../images/product/slides/btn_navigation.png);
+                    background-repeat: no-repeat;
+
+                    &.prev{
+                        left: 0;
+                        background-position: -5px -225px;
+                    }
+
+                    &.next{
+                        right: 0;
+                        background-position: -5px -5px;
+                    }
+
+                    &.prev:hover,
+                    &.prev.on{
+                        left: 0;
+                        background-position: -5px -335px;
+                    }
+
+                    &.next:hover,
+                    &.next.on{
+                        right: 0;
+                        background-position: -5px -115px;
+                    }
+                }
+            }//.slides
+
+        }//#product
+
+    &#cosmetics{
+        margin-top: 150px;
+
+        >.container{
+            position: relative;
+            width: 1100px;
+            height: 1500px;
+            margin: 0 auto;
+            background-color: #1a5a2d;
+
+            >p{
+                position: absolute;
+                top: -100px;
+                left: 0;
+                display: block;
+                width: 900px;
+                height: 1449px;
+                text-indent: -9999px;
+                background-image: url(./../images/새삭잎_bg.png);
+                background-size: contain;
+            }
+            >.itembox{
+                width: 900px;
+                justify-content: space-between;
+                margin: 50px auto ;
+
+                >li{
+                    display: block;
+                    position: relative;
+                    width: 280px;
+                    height: 390px;
+                    background-color: #fff;
+                    opacity: 0.9;
+                    >a{
+                        position: absolute;
+                        top: 250px;
+                        left: 30px;
+                        color: #1a5a2d;
+                        >span{
+                            display: block;
+                            position: absolute;
+                            width: 180px;
+                            height: 200px;
+                            text-indent: -9999px;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                        >h4:hover{text-decoration: underline;}
+                        >p:hover{font-weight: 600;}
+                    }
+                }
+            }
+            >.itembox_1{
+                display: flex; 
+                padding-top: 120px;
+                >li:nth-child(1){
+                    >a{
+                        >span{
+                            top: -190px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/waterdropcream.png);
+                        }
+                    }
+                }//li:nth-child(1)
+                >li:nth-child(2){
+                    >a{
+                        >span{
+                            top: -190px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/puff.png);
+                        }
+                    }
+                }//li:nth-child(2)
+                >li:nth-child(3){
+                    >a{
+                        >span{
+                            top: -190px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/cushion.png);
+                        }
+                    }
+                }//li:nth-child(3)
+            }
+            >.itembox_2{
+                display: flex;
+                >li:nth-child(1){
+                    >a{
+                        >span{
+                            top: -210px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/suncream.png);
+                        }  
+                    }
+                }//li:nth-child(1)
+                >li:nth-child(2){
+                    >a{
+                        >span{
+                            top: -190px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/cleansing.png);
+                        }
+                    }
+                }//li:nth-child(2)
+                >li:nth-child(3){
+                    >a{
+                        >span{
+                            top: -210px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/ample.png);
+                        }
+                    }
+                }//li:nth-child(3)
+            }
+            >.itembox_3{
+                display: flex;
+                >li:nth-child(1){
+                    >a{
+                        >span{
+                            top: -210px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/cottonpuff.jpg);
+                        }  
+                    }
+                }//li:nth-child(1)
+                >li:nth-child(2){
+                    >a{
+                        >span{
+                            top: -250px; 
+                            left: -30px;
+                            width: 280px;
+                            height: 300px;
+                            background-image: url(./../images/cosmetics/shampoo.png);
+                        }
+                    }
+                }//li:nth-child(2)
+                >li:nth-child(3){
+                    >a{
+                        >span{
+                            top: -210px; 
+                            left: 20px;
+                            background-image: url(./../images/cosmetics/soap.png);
+                        }
+                    }
+                }//li:nth-child(3)
+            }
+        }//.container         
+           
+    }//#cosmetics
+
+    &#plastic_jars{
+        width: 1100px;
+        margin: 100px auto 0;
+
+        >.gallery{
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 100px;
+            background-image:url(./../images/plastic_jars/plastic_jars_bg.jpg);
+            
+            //background-position: 0 0 ;
+            background-size: contain;//380px auto,
+            background-repeat: no-repeat;
+            
+            >.gallery-container{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                width: 500px;
+                
+                >.gallery-thmbs{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 555px;
+                    height: 200px;
+                    order: 100;
+                    
+                    >li{
+                        display: block;
+                        width: 133px;
+                        height: 93px;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                        &.on,
+                        &:hover{
+                            border: 5px solid #1a5a2d;
+                            box-sizing: border-box;
+                            border-radius: 10px;
+                        }
+
+                        >a{
+                            display: block;
+                            height: 93px;
+                            text-indent: -9999px;
+                        }
+
+                        &:nth-child(1){background-image: url(./../images/plastic_jars/th_brown_bottle_s.jpg);}
+                        &:nth-child(2){background-image: url(./../images/plastic_jars/th_brown_bottle_m.jpg);}
+                        &:nth-child(3){background-image: url(./../images/plastic_jars/th_flor_jcr_001.jpg);}
+                        &:nth-child(4){background-image: url(./../images/plastic_jars/th_flor-jcr-002.jpg);}
+                        &:nth-child(5){background-image: url(./../images/plastic_jars/th_flor-jcr-003.jpg);}
+                        &:nth-child(6){background-image: url(./../images/plastic_jars/th_flor_jcr_004.jpg);}
+                        &:nth-child(7){background-image: url(./../images/plastic_jars/th_flor-jcr-007.jpg);}
+                        &:nth-child(8){background-image: url(./../images/plastic_jars/th_flor-jcr-008.jpg);}
+                        
+                    }             
+
+                }//gallery-thmbs
+
+                >.gallery-screen{
+                    width: 100%;
+                    height: 350px;
+                    margin-bottom: 10px;
+                    text-indent: -9999px;
+                    background-image: url(./../images/plastic_jars/th_brown_bottle_s.jpg);
+                    background-position: 50% 50%;
+                    background-size: cover;
+                    border: 3px solid #1a5a2d;
+                    border-radius: 20px;
+                }
+
+            }
+
+        }//.gallery
+    }//#uxdesign
+
+        &#about{
+
+            >h3{
+                position: relative;
+                margin-bottom: 20px;
+                font-size: 32px;
+                text-align: center;
+                font-weight: 500;
+
+            }
+
+            >.frame{
+                width: 1100px;
+                margin:0 auto 50px;
+
+                >img{
+                    display: block;
+                    width: 100%;
+                }
+            }            
+        }//#about
+    }
+
+    footer{
+        width: 100%;
+        min-width: 1100px;
+
+        >article.working{
+            margin-top: 50px;
+            border-top: 1px solid #aaa;
+
+            >p{
+                width: 1100px;
+                margin: 0 auto;
+                text-indent: 50px;
+                line-height: 80px;
+
+                >a{
+                    margin: 0 30px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        >article.info{
+            background-color: #1a5a2d;
+            >.container{
+                position: relative;//푸터로고에 대한 기준점
+                width: 1100px;
+                margin: 0 auto;
+                padding: 45px 0 20px;
+
+                >h2,
+                >p{
+                    margin-bottom: 15px;
+                    padding-left: 30px;
+                    color: #fff;
+                    font-size: 13px;
+                    >a{color: #fff;}
+                }
+
+                >.contact>a{color:#fff;}
+                >.contact>.bar{margin: 0 10px;}
+
+                //푸터로고
+                >h2:after{
+                    display: block;
+                    position: absolute;
+                    right: 100px;
+                    top: 50%;
+                    width: 103px;
+                    height: 55px;
+                    margin-top: -34px;
+                    background-image: url(./../images/FLOR/w_logo.png);
+                    background-size: contain;
+                    content: '';
+                }
+            }
+        }
+    }
+    
+    aside{
+        display: none;
+        position: fixed;
+        right: 1.8em;
+        bottom: 1.8em;
+        z-index: 1000;
+    
+        >a{//footer topkey
+            display: block;
+            width: 28px;
+            height: 28px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: center;
+            background-color: #90f0ad;
+    
+            &:hover{
+                color: #222;
+                background-color: rgba(235, 235, 235, 0.8);               
+            }
+        }
+    }
+    
+
+}    
+
+

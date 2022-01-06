@@ -1,0 +1,719 @@
+@charset "UTF-8";
+#wrap .h-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#wrap h1 {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  color: #fff;
+  font-size: 24px;
+  z-index: 100;
+}
+
+#wrap .loading {
+  /* 전체화면 가득 채우기 */
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 10000;
+}
+
+#wrap .loading > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  background-image: url(./../images/loading.gif);
+  text-indent: -9999px;
+}
+
+#wrap header {
+  position: relative;
+  width: 100%;
+  min-width: 1100px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  /* opacity: 0.3; */
+}
+
+#wrap header:after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 1px;
+  border-bottom: 1px solid #eee;
+  content: '';
+}
+
+#wrap header > .container {
+  position: relative;
+  width: 1100px;
+  height: 66px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+#wrap header > .container > .logo {
+  width: 100px;
+  margin-top: 10px;
+  background-image: url(./../images/FLOR/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#wrap header > .container > .logo > a {
+  display: block;
+  width: 200px;
+  height: 66px;
+  color: #1a5a2d;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 66px;
+  text-indent: 100px;
+}
+
+#wrap header > .container > .logo > a > span {
+  color: #fff;
+}
+
+#wrap header > .container > nav {
+  position: absolute;
+  right: 50px;
+  top: 0;
+}
+
+#wrap header > .container > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 600px;
+}
+
+#wrap header > .container > nav > .gnb > li {
+  width: 100px;
+}
+
+#wrap header > .container > nav > .gnb > li > a {
+  display: block;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
+}
+
+#wrap header > .container > nav > .gnb > li.on > a,
+#wrap header > .container > nav > .gnb > li:hover > a {
+  color: #1a5a2d;
+  font-weight: 500;
+}
+
+#wrap header ~ section {
+  padding-top: 70px;
+}
+
+#wrap header ~ section > h2 {
+  position: relative;
+  margin-bottom: 70px;
+  color: #1a5a2d;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#wrap header ~ section > h2:after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  width: 65px;
+  height: 80px;
+  background-image: url(./../images/FLOR/새삭잎_deco_tit.png);
+  background-size: cover;
+  content: '';
+}
+
+#wrap section {
+  width: 100%;
+  min-width: 1100px;
+}
+
+#wrap section#visual {
+  position: relative;
+  min-width: 1100px;
+  background-image: url(./../images/FLOR/visual.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#wrap section#visual:before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 27, 0.2);
+  content: '';
+}
+
+#wrap section#visual > .intro {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#wrap section#visual > .intro > h2 {
+  position: absolute;
+  top: -50px;
+  left: 56%;
+  width: 150px;
+  height: 100px;
+  text-indent: -9999px;
+  background-image: url(./../images/FLOR/w_logo.png);
+  background-repeat: no-repeat;
+}
+
+#wrap section#visual > .intro > p {
+  margin-top: 20px;
+  color: #f7f7f7;
+  font-size: 18px;
+  text-indent: 520px;
+  letter-spacing: 3px;
+}
+
+#wrap section#visual > .intro > .myico {
+  position: absolute;
+  bottom: -400px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 150px;
+  margin: 60px auto 0;
+}
+
+#wrap section#visual > .intro > .myico > span {
+  display: block;
+  width: 40px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+#wrap section#visual > .intro > .myico > span:hover {
+  background-color: #82eea2;
+  border-color: transparent;
+}
+
+#wrap section#visual > .intro > .myico > span > i {
+  display: block;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+
+#wrap section#product article {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#wrap section#product > .slides {
+  overflow: hidden;
+  position: relative;
+  height: 576px;
+}
+
+#wrap section#product > .slides > .slides-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(1100px * 5);
+}
+
+#wrap section#product > .slides > .slides-container > li {
+  width: 1100px;
+  height: 620px;
+  text-indent: -9999px;
+  background-position: center center;
+  background-size: cover;
+}
+
+#wrap section#product > .slides > .slides-container > li.banner_1 {
+  background-image: url(../images/product/slides/slide_1.jpg);
+}
+
+#wrap section#product > .slides > .slides-container > li.banner_2 {
+  background-image: url(../images/product/slides/slide_2.jpg);
+}
+
+#wrap section#product > .slides > .slides-container > li.banner_3 {
+  background-image: url(../images/product/slides/slide_3.jpg);
+}
+
+#wrap section#product > .slides > .slides-container > li.banner_4 {
+  background-image: url(../images/product/slides/slide_4.jpg);
+}
+
+#wrap section#product > .slides > .slides-container > li.banner_5 {
+  background-image: url(../images/product/slides/slide_5.jpg);
+}
+
+#wrap section#product > .slides > .slides-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  width: 110px;
+  margin-left: -55px;
+}
+
+#wrap section#product > .slides > .slides-pagination > li {
+  float: left;
+  margin-right: 5px;
+  width: 18px;
+  background-image: url(../images/product/slides/bul.png);
+}
+
+#wrap section#product > .slides > .slides-pagination > li:hover, #wrap section#product > .slides > .slides-pagination > li.on {
+  background-position: 0 -18px;
+}
+
+#wrap section#product > .slides > .slides-pagination > li > a {
+  display: block;
+  height: 18px;
+  text-indent: -9999px;
+}
+
+#wrap section#product > .slides > a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  height: 100px;
+  margin-top: -50px;
+  text-indent: -9999px;
+  background-image: url(./../images/product/slides/btn_navigation.png);
+  background-repeat: no-repeat;
+}
+
+#wrap section#product > .slides > a.prev {
+  left: 0;
+  background-position: -5px -225px;
+}
+
+#wrap section#product > .slides > a.next {
+  right: 0;
+  background-position: -5px -5px;
+}
+
+#wrap section#product > .slides > a.prev:hover, #wrap section#product > .slides > a.prev.on {
+  left: 0;
+  background-position: -5px -335px;
+}
+
+#wrap section#product > .slides > a.next:hover, #wrap section#product > .slides > a.next.on {
+  right: 0;
+  background-position: -5px -115px;
+}
+
+#wrap section#cosmetics {
+  margin-top: 150px;
+}
+
+#wrap section#cosmetics > .container {
+  position: relative;
+  width: 1100px;
+  height: 1500px;
+  margin: 0 auto;
+  background-color: #1a5a2d;
+}
+
+#wrap section#cosmetics > .container > p {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  display: block;
+  width: 900px;
+  height: 1449px;
+  text-indent: -9999px;
+  background-image: url(./../images/새삭잎_bg.png);
+  background-size: contain;
+}
+
+#wrap section#cosmetics > .container > .itembox {
+  width: 900px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px auto;
+}
+
+#wrap section#cosmetics > .container > .itembox > li {
+  display: block;
+  position: relative;
+  width: 280px;
+  height: 390px;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+#wrap section#cosmetics > .container > .itembox > li > a {
+  position: absolute;
+  top: 250px;
+  left: 30px;
+  color: #1a5a2d;
+}
+
+#wrap section#cosmetics > .container > .itembox > li > a > span {
+  display: block;
+  position: absolute;
+  width: 180px;
+  height: 200px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#wrap section#cosmetics > .container > .itembox > li > a > h4:hover {
+  text-decoration: underline;
+}
+
+#wrap section#cosmetics > .container > .itembox > li > a > p:hover {
+  font-weight: 600;
+}
+
+#wrap section#cosmetics > .container > .itembox_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 120px;
+}
+
+#wrap section#cosmetics > .container > .itembox_1 > li:nth-child(1) > a > span {
+  top: -190px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/waterdropcream.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_1 > li:nth-child(2) > a > span {
+  top: -190px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/puff.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_1 > li:nth-child(3) > a > span {
+  top: -190px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/cushion.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap section#cosmetics > .container > .itembox_2 > li:nth-child(1) > a > span {
+  top: -210px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/suncream.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_2 > li:nth-child(2) > a > span {
+  top: -190px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/cleansing.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_2 > li:nth-child(3) > a > span {
+  top: -210px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/ample.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap section#cosmetics > .container > .itembox_3 > li:nth-child(1) > a > span {
+  top: -210px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/cottonpuff.jpg);
+}
+
+#wrap section#cosmetics > .container > .itembox_3 > li:nth-child(2) > a > span {
+  top: -250px;
+  left: -30px;
+  width: 280px;
+  height: 300px;
+  background-image: url(./../images/cosmetics/shampoo.png);
+}
+
+#wrap section#cosmetics > .container > .itembox_3 > li:nth-child(3) > a > span {
+  top: -210px;
+  left: 20px;
+  background-image: url(./../images/cosmetics/soap.png);
+}
+
+#wrap section#plastic_jars {
+  width: 1100px;
+  margin: 100px auto 0;
+}
+
+#wrap section#plastic_jars > .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px 100px;
+  background-image: url(./../images/plastic_jars/plastic_jars_bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 555px;
+  height: 200px;
+  -webkit-box-ordinal-group: 101;
+      -ms-flex-order: 100;
+          order: 100;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li {
+  display: block;
+  width: 133px;
+  height: 93px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li.on, #wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:hover {
+  border: 5px solid #1a5a2d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li > a {
+  display: block;
+  height: 93px;
+  text-indent: -9999px;
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(1) {
+  background-image: url(./../images/plastic_jars/th_brown_bottle_s.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(2) {
+  background-image: url(./../images/plastic_jars/th_brown_bottle_m.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(3) {
+  background-image: url(./../images/plastic_jars/th_flor_jcr_001.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(4) {
+  background-image: url(./../images/plastic_jars/th_flor-jcr-002.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(5) {
+  background-image: url(./../images/plastic_jars/th_flor-jcr-003.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(6) {
+  background-image: url(./../images/plastic_jars/th_flor_jcr_004.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(7) {
+  background-image: url(./../images/plastic_jars/th_flor-jcr-007.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-thmbs > li:nth-child(8) {
+  background-image: url(./../images/plastic_jars/th_flor-jcr-008.jpg);
+}
+
+#wrap section#plastic_jars > .gallery > .gallery-container > .gallery-screen {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+  text-indent: -9999px;
+  background-image: url(./../images/plastic_jars/th_brown_bottle_s.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 3px solid #1a5a2d;
+  border-radius: 20px;
+}
+
+#wrap section#about > h3 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+}
+
+#wrap section#about > .frame {
+  width: 1100px;
+  margin: 0 auto 50px;
+}
+
+#wrap section#about > .frame > img {
+  display: block;
+  width: 100%;
+}
+
+#wrap footer {
+  width: 100%;
+  min-width: 1100px;
+}
+
+#wrap footer > article.working {
+  margin-top: 50px;
+  border-top: 1px solid #aaa;
+}
+
+#wrap footer > article.working > p {
+  width: 1100px;
+  margin: 0 auto;
+  text-indent: 50px;
+  line-height: 80px;
+}
+
+#wrap footer > article.working > p > a {
+  margin: 0 30px;
+  font-weight: 600;
+}
+
+#wrap footer > article.info {
+  background-color: #1a5a2d;
+}
+
+#wrap footer > article.info > .container {
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 45px 0 20px;
+}
+
+#wrap footer > article.info > .container > h2,
+#wrap footer > article.info > .container > p {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  color: #fff;
+  font-size: 13px;
+}
+
+#wrap footer > article.info > .container > h2 > a,
+#wrap footer > article.info > .container > p > a {
+  color: #fff;
+}
+
+#wrap footer > article.info > .container > .contact > a {
+  color: #fff;
+}
+
+#wrap footer > article.info > .container > .contact > .bar {
+  margin: 0 10px;
+}
+
+#wrap footer > article.info > .container > h2:after {
+  display: block;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  width: 103px;
+  height: 55px;
+  margin-top: -34px;
+  background-image: url(./../images/FLOR/w_logo.png);
+  background-size: contain;
+  content: '';
+}
+
+#wrap aside {
+  display: none;
+  position: fixed;
+  right: 1.8em;
+  bottom: 1.8em;
+  z-index: 1000;
+}
+
+#wrap aside > a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  background-color: #90f0ad;
+}
+
+#wrap aside > a:hover {
+  color: #222;
+  background-color: rgba(235, 235, 235, 0.8);
+}
+/*# sourceMappingURL=style.css.map */

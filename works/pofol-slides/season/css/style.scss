@@ -1,0 +1,378 @@
+/*sass로 작성*/
+@charset "utf-8";
+#wrap{
+   header{position: relative;
+      >h1{
+         height: 37px;
+         margin: 10px 0 10px 10px;
+         color: rgb(46, 131, 241);
+         line-height: 37px;
+         text-indent: 150px;
+         background-image: url(./../images/logo.png);
+         background-repeat: no-repeat;
+         background-size: contain;
+      }
+      >p{
+         position: absolute;
+         top: 70px;
+         left: 25%;
+         width: 250px;
+         height: 402px;
+         text-indent: -9999px;
+         background-image: url(./../images/bg_tit.png);
+         background-size: contain;
+         z-index: 1000;
+
+      }
+   }
+   #slides{
+      overflow: hidden;
+      position:relative;
+      width:100%;
+      height:496px;
+
+   /* 슬라이드 컨테이너 */
+      >.slides-container{
+         display:flex;
+         position:absolute;
+         left:0;
+         top:0;
+         width:300%;
+         height:496px;
+
+         >li{
+         width: 33.33333%;
+         height:500px;
+         background-repeat:no-repeat;
+         background-position:center center;
+         background-size:cover;
+         opacity: 0.8;
+      
+         
+         &:nth-child(1){background-image:url(../images/banner_1.jpg);}
+         &:nth-child(2){background-image:url(../images/banner_2.jpg)}
+         &:nth-child(3){background-image:url(../images/banner_3.jpg);}
+
+         >a{display:block; height:500px;text-indent:-9999px;}  
+
+         }    
+      }
+      /* 슬라이드 페이지네이션 */
+      >.slides-pagination{
+         display:flex;
+         position:absolute;
+         left:50%;
+         bottom:30px;
+         width:130px;
+         margin-left:-75px;
+         z-index:1000;
+
+         >li{
+            width:18px; 
+            height:18px; 
+            margin-right:10px;  
+            background-image:url(../images/bul.png);
+            background-position:0 0;
+            background-repeat:no-repeat;
+
+            &:last-child{margin-right:0;}
+            &.on{background-position:0 -18px;}
+
+            >a{display:block; width:100%; height:100%; text-indent:-9999px;}        
+         }
+      }
+   /* 이전, 다음 */
+      >.slides-navigation{
+         display:block;
+         position:absolute;
+         top:210px;
+         width:80px;
+         height:100px;
+         text-indent:-9999px;
+         background-image:url(../images/btn_navigation.png);
+         background-repeat:no-repeat;
+         z-index:1000;
+      }
+      >.slides-previous{
+         left:10px;
+         background-position: -5px -225px;
+
+         &:hover{background-position: -5px -335px;}
+      }
+      >.slides-next{
+         right:10px;
+         background-position: -5px -5px;
+
+         &:hover{background-position: -5px -115px;} 
+      }
+   }//#slides
+
+//bg_img
+   >span{
+         
+         display: block;
+         position: absolute;   
+         width: 100%;
+         height: 850px;
+         text-indent: -9999px;        
+         background-size: cover;
+         background-position: center center;
+         opacity: 0.3;
+     &:nth-of-type(1){top: 552px; background-image: url(./../images/bg.jpg); }
+     &:nth-of-type(2){top: 1402px; background-image: url(./../images/bg-2.jpg); }
+     &:nth-of-type(3){top: 2252px; background-image: url(./../images/banner_3.jpg); }
+     &:nth-of-type(4){top: 3102px; background-image: url(./../images/bg-4.jpg); }
+   }
+
+
+//게절별 슬라이드 
+   >section{
+      position: relative;
+      width:700px;
+      margin: 100px auto ;
+      >h2{
+         position: absolute;
+         display: block;
+         left: 40%;
+         height: 100px;
+         color: #222;
+         font-size: 27px;
+         line-height: 100px;
+         //text-align: center;
+        &:nth-of-type(1){top: -100px;}
+        &:nth-of-type(2){top: 700px;}
+        &:nth-of-type(3){top: 1500px;}
+        &:nth-of-type(4){top: 2370px;}
+      }
+
+      >.season{//display: none;
+         position: relative;
+         width: 700px;
+         height: 400px;
+         margin-bottom: 50px;
+         border: 1px solid #ccc;
+
+         >.slides-container{
+            width: 700px;
+            height: 900px;
+      
+            >li{
+               display: none;
+               position: absolute;
+               right: 0;
+               top: 0;
+               width: 700px;
+               height: 400px;
+               background-repeat: no-repeat;
+               background-size: cover;
+
+               >a{
+                  position: absolute;
+                  left: 0;
+                  top: 400px;
+                  display: block;
+                  width: 700px;
+                  height: 200px;
+                  background-color: #fff;
+
+                  >span{
+                     position: absolute;
+                     left: 30px;
+                     top: 70px;
+                     font-size: 16px;
+                     font-weight: 800;
+                  }
+                  >h3{
+                     position: absolute;
+                     left: 30px;
+                     top: 20px;
+                     width: 500px;
+                     font-size: 25px;
+                     line-height: 35px;               
+                  }
+                  >p{
+                     position: absolute;
+                     left: 30px;
+                     bottom: 30px;
+                     font-weight: 800;
+                  }
+
+               }//a
+
+            }//li
+
+         }//.slides-container
+      
+         >.slides-pagination{
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            width: 110px;
+            margin-left: -70px;
+
+            >li{
+               width: 18px;
+               height: 18px;
+               margin-right: 10px;
+               background-image: url(./../images/bul.png);
+               background-repeat: no-repeat;
+
+               >a{
+                  display: block;
+                  width: 13px;
+                  height: 13px;
+                  text-indent: -9999px;
+               }
+               &.on{
+                  background-position: 0 -18px;
+               }
+               &:hover{
+                  background-position: 0 -18px;
+               }          
+            }//li
+         }//slides-pagination
+         >.slides-navigation{
+            display: flex;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 70px;
+            height: 40px;
+            text-indent: -9999px;
+            background-color: rgba(193, 252, 155,0.8);
+            >a{
+               display: block;
+               width: 35px; 
+               height: 40px;
+
+               >.slides-prev{
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: 10px;
+                  width: 0;
+                  height: 0;
+                  border-width: 10px;
+                  border-style: solid;
+                  border-color: transparent rgb(59, 153, 98) transparent transparent; 
+                }
+                >.slides-next{
+                  display: block;
+                  position: absolute;
+                  left: 50px;
+                  top: 10px;
+                  width: 0;
+                  height: 0;
+                  border-width: 10px;
+                  border-style: solid;
+                  border-color: transparent transparent transparent rgb(59, 153, 98); 
+                }
+                &:hover{background-color: rgb(218, 245, 215);}
+              }
+          }
+      }//slides
+
+      >#slides_1{
+         margin-top: 200px;
+
+         >.slides-container{
+            >li{
+               &:nth-child(1){
+                  display: block;
+                  background-image: url(../images/spring/thumb1합천_황매산.png);   
+               }
+               &:nth-child(2){
+                  background-image: url(../images/spring/thumb2광양매화마을.png);
+               }
+               &:nth-child(3){
+                  background-image: url(../images/spring/thumb3매방유채꽃.png);
+               }
+               &:nth-child(4){
+                  background-image: url(../images/spring/thumb4한림공원수선화.jpg);   
+               }
+            }          
+         }
+      
+      }//#slides_1
+      >#slides_2{
+         margin-top: 400px;
+
+         >.slides-container{
+            >li{
+               &:nth-child(1){
+                  display: block;
+                  background-image: url(../images/summer/thumb6변산반도.png);   
+               }
+               &:nth-child(2){
+                  background-image: url(../images/summer/thumb4바람의언덕.jpg);
+               }
+               &:nth-child(3){
+                  background-image: url(../images/summer/thumb4-2바람의언덕노을.jpg);
+               }
+               &:nth-child(4){
+                  background-image: url(../images/summer/thumb5구와우마을.png);   
+               }
+            }    
+         }
+      }//#slides_2
+      >#slides_3{
+         margin-top: 400px;
+
+         >.slides-container{
+            >li{
+               &:nth-child(1){
+                  display: block;
+                  background-image: url(../images/fall/thumb7주왕산.png);   
+               }
+               &:nth-child(2){
+                  background-image: url(../images/fall/thumb8무등산옛길억새.png);
+               }
+               &:nth-child(3){
+                  background-image: url(../images/fall/thumb9안성팜랜드.png);
+               }
+               &:nth-child(4){
+                  background-image: url(../images/fall/thumb10화천해산령.png);   
+               }
+            }    
+         }
+      }//#slides_3
+      >#slides_4{
+         margin-top: 450px;
+
+         >.slides-container{
+            >li{
+               &:nth-child(1){
+                  display: block;
+                  background-image: url(../images/winter/thumb11-2무주덕유산.png);   
+               }
+               &:nth-child(2){
+                  background-image: url(../images/winter/thumb11무주덕유산향적봉.png);
+               }
+               &:nth-child(3){
+                  background-image: url(../images/winter/thumb12평창오대한선재길.png);
+               }
+               &:nth-child(4){
+                  background-image: url(../images/winter/thumb13인제원대리.png);   
+               }
+            }    
+         }
+      }//#slides_4
+    }//section
+
+    >footer{
+       width: 100%;
+       padding-top: 241px;
+       >address{
+          height: 160px;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 160px;
+          text-align: center;
+          background-color: #3d448a ;
+       }
+    }
+}//wrap
+

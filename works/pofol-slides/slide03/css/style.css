@@ -1,0 +1,92 @@
+.story {
+  position: relative;
+  width: 620px;
+  height: 255px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.story > .story-container {
+  width: 100%;
+  height: 100%;
+}
+
+.story > .story-container > li {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.story > .story-container > li:nth-child(1) {
+  display: block;
+  background-image: url(./../images/mid_scnd_slides1.jpg);
+}
+
+.story > .story-container > li:nth-child(1) > a:nth-of-type(1) {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 72px;
+  width: 180px;
+  height: 68px;
+  text-indent: -9999px;
+}
+
+.story > .story-container > li:nth-child(2) {
+  background-image: url(./../images/mid_scnd_slides2.jpg);
+}
+
+.story > .story-container > li:nth-child(2) > a:nth-of-type(1) {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 68px;
+  text-indent: -9999px;
+}
+
+.story > .story-container > li > p {
+  position: absolute;
+  left: 30px;
+  top: 170px;
+  line-height: 1.6;
+}
+
+.story > .story-container > li > a.view {
+  display: block;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  width: 37px;
+  height: 9px;
+  text-indent: -9999px;
+  background-image: url(./../images/view.png);
+}
+
+.story > a {
+  display: block;
+  position: absolute;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+}
+
+.story > a:nth-of-type(1) {
+  right: 50px;
+  background-image: url(./../images/story_play.png);
+}
+
+.story > a:nth-of-type(2) {
+  right: 30px;
+  background-image: url(./../images/story_pause.png);
+}
+
+.story > a.on {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style.css.map */
